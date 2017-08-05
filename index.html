@@ -25,16 +25,18 @@
 	
 	<link rel="shortcut icon" href="css/fav.ico" type="image/x-icon">
 	<link rel="icon" href="css/img/favicon.ico" type="image/x-icon">
+
 	<link href="css/style.css" rel="stylesheet" type="text/css" >
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/f938145fbd.js"></script>
 
 </head>
 <body>
 <div class = "carol-site">
 	<header>
-		<nav>
+		<nav class="slide-effects slide">
 			<div>
-				<a href="index.html"><img src="logo/c2.svg" class="logo"></a>
+				<a href="index.html"><img src="css/img/c2.svg" class="logo"></a>
 			</div>
 				<div id="nav-icon3">
 					  <span></span>
@@ -42,7 +44,32 @@
 					  <span></span>
 					  <span></span>
 				</div>
-		</nav>
+			<div class="sidebar-menu">
+					<ul id="menu" class="navigation">	
+						<li class="menu-item-1 menu-pick menu-object" id="menu-obj"><a heref="#" target="_blank" class="nav-links">Profile</a></li>
+
+						<li class="menu-item-2 menu-pick menu-object" id="menu-obj"><a heref="#" target="_blank" class="nav-links">Skills</a></li>
+
+						<li class="menu-item-3 menu-pick menu-object" id="menu-obj"><a heref="#" target="_blank" class="nav-links">Project</a></li>
+
+						<li class="menu-item-4 menu-pick menu-object" id="menu-obj" class="nav-links"><a heref="#" target="_blank" class="nav-links">Contact me</a></li>
+					</ul>
+				<div class="social-media">	
+					<ul id="social" class="nav navbar-nav navbar-slide-right social">
+						<li class="fb reach-me"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						
+						<li class="linkedin reach-me"><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+
+						<li class="instagram reach-me"><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>	
+					</ul>
+				</div>	
+				<!--	<div class="hire-me">
+						<a class="button welcome-button Explore" href="#">Hire Me</a>
+					</div> -->
+				
+				</div> 
+
+						</nav>
 	</header>
 </div>
 <div class="main-content">
@@ -58,7 +85,7 @@
 	</section>
 	<div class="twinkle"></div>
 </div>
-<div class="owl"> </div>
+<div class="owl"> <img src= ""></div>
 <div class="load">
 <canvas id="canvas"></canvas>
 
@@ -66,5 +93,6 @@
 
 <script type="text/javascript" src="js/ham.js"></script>
 <script type="text/javascript" src="js/canvas.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
 </body>
 </html>
