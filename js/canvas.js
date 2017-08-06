@@ -10,16 +10,16 @@ var c = canvas.getContext('2d');
 pic.src="logo/c2.svg";
 
 var heading = new Image();
-heading.src = "css/img/heading.svg";
+heading.src = "css/img/heading.svg"; */
 
 var owl  = new Image();
 owl.src = "css/img/owl.png";
 
-pic.addEventListener("load", function(){c.drawImage(pic, 30,30),false }); //how to add an image to a canvas
+//pic.addEventListener("load", function(){c.drawImage(pic, 30,30),false }); //how to add an image to a canvas
 
-heading.addEventListener("load", function(){ c.drawImage(heading, 350, 300),false}); */
+//heading.addEventListener("load", function(){ c.drawImage(heading, 350, 300),false}); 
 
-owl.addEventListener("load", function(){ c.drawImage(owl, 50, 100),false});
+owl.addEventListener("load", function(){ c.drawImage(owl, 28, 295),false});
 
 /*var txt = "Carol Gonzalez \n Front-End/UI Developer";
 var x = 500;

@@ -1,5 +1,19 @@
 $(document).ready(function(){
-	$(".menu-object").hover(function(){
+	$(".button-primary").hover(function (){
+		$(this).css({
+			"background-color": "#fe14a7", "transition": "5s, ease-out"});
+		$(this).addClass("hide");
+
+		}, function(){
+		$(this).css("background-color", "transparent");
+		$(this).removeClass("hide");
+	});
+});
+
+
+console.log("I am working");
+
+	/*$(".menu-object").hover(function(){
 		$(this).css("background-color", "#fe14a7");
 	});
 	$(".nav-icon3").click(function(){ //when closed
@@ -9,9 +23,4 @@ $(document).ready(function(){
 	$(".open").click(function(){ //when opened
 		$(".sidebar-menu").removeClass("hide-menu");
 	});
-
-});
-
-
-console.log("I am working");
-
+*/
