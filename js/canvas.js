@@ -19,7 +19,7 @@ owl.src = "css/img/owl.png";
 
 //heading.addEventListener("load", function(){ c.drawImage(heading, 350, 300),false}); 
 
-owl.addEventListener("load", function(){ c.drawImage(owl, 28, 295),false});
+owl.addEventListener("load", function(){ c.drawImage(owl, 28, 200),false});
 
 /*var txt = "Carol Gonzalez \n Front-End/UI Developer";
 var x = 500;

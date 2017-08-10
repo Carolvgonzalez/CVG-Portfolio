@@ -3,6 +3,9 @@
 	margin: 0;
 	overflow: hidden;
 	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -0-bi
 }
 html{
 	text-rendering: optimizeLegibility;
@@ -23,7 +26,7 @@ body{
 .logo{
     width: auto;
     float: left;
-    margin: 55px 0px 0px 30px;
+    margin: 55px 0px 0px 55px;
     padding-left: 5px; 
     z-index: 1000;
 }
@@ -36,10 +39,9 @@ body{
   position: fixed;
   float: right;
 }
-#nav-icon3{
-  /*float: right; */
+#nav-icon{
   margin-top: 55px; 
-  margin-right: 50px;
+  margin-right: 70px;
   width: 40px;
   height: 40px;
   position: relative;
@@ -55,12 +57,12 @@ body{
   z-index: 1000;
 
 }
- #nav-icon3 span{
+ #nav-icon span{
   display: block;
   position: absolute;
   height: 3.5px;
   width: 100%;
-  border-radius: 4px;
+  
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -75,113 +77,52 @@ body{
 
 /* Icon 3 */
 
-#nav-icon3 span:nth-child(1) {
+#nav-icon span:nth-child(1) {
   top: 0px;
   background-color: #fe14a7 !important;
 
 }
 
-#nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+#nav-icon span:nth-child(2), #nav-icon span:nth-child(3) {
   top: 10px;
   background-color: #fe14a7 !important;
 }
 
-#nav-icon3 span:nth-child(4) {
+#nav-icon span:nth-child(4) {
   top: 20px;
   background-color: #fe14a7 !important;
 }
 
-#nav-icon3.open span:nth-child(1) {
+#nav-icon.open span:nth-child(1) {
   top: 25px;
   width: 0%;
   left: 50%;
-  background-color: #fe14a7 !important;
+  margin-right: 20px;
+  background-color: #fafafa !important;
 }
 
-#nav-icon3.open span:nth-child(2) {
+#nav-icon.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: #fe14a7 !important;
+  background-color: #fafafa !important;
 }
 
-#nav-icon3.open span:nth-child(3) {
+#nav-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  background-color: #fe14a7 !important;
+  background-color: #fafafa !important;
 }
 
-#nav-icon3.open span:nth-child(4) {
+#nav-icon.open span:nth-child(4) {
   top: 25px;
   width: 0%;
   left: 50%;
-  background-color: #fe14a7 !important;
+  background-color: #fafafa !important;
 }
-/*
-.sidebar-menu{
-  position: fixed;
-  margin-left: 0px;
-  top: 0;
-  right: 0;
-  /*width: 250px; */
- /*background-color: rgba(7, 6, 87, 0.9);
-  opacity: 0.9;
-  overflow: hidden;
-  height: 100vh;
-  float: right;
-  padding-top: 60px;
-  z-index: 1;
-  max-height: 100vh;
-  transition: all 0.5s ease-in-out;
-}
-/*.hide-menu{
-  margin-right: -250px;
-}
-*/
-/*.nav-links{
-  text-decoration: none;
-  display: block;
-  font-size: 14px;
-  color: #fafafa;
-  padding: 8px 8px 8px 20px;
-  text-align: center;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-/*.fa{
-  font-size: 12px;
-}
-*//*
-.social{
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
-.social li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-}
-.social li a {
-  font-size: 24px;
-  display: table;
-  width: 45px;
-  height: 40px;
-  margin: 0 6px;
-}
-.social li a i {
-  text-align: center;
-  display: table-cell;  
-  color: #fafafa;
-}
-
-*/
 .welcome{
   position: absolute;
   left: 29%;
@@ -202,7 +143,7 @@ body{
   color: inherit;
   text-align: center;
 }  
-.button-primary{
+.button-primary, .btn-primary{
   border: 1px solid rgba(250,250,250, 0.9);
   text-decoration: none;
   color: #fafafa;
@@ -246,57 +187,83 @@ body{
     width: 30px;
     height: 2px;
     background-color: rgba(250,250,250, 0.9);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: -1;
 }
-
-.Explore{
-  margin-left: 45px;
-  
+.show{
+  transform: translateX(0%);
 }
 
-.Profile{
-  margin-left: 35px;
-  letter-spacing: 2px;
+/* Sidebar appears */
+.sidebar_menu{
+  transform: translateX(100%);
+  position: fixed;
+  width: 225px; 
+  margin-right: 0px;
+  top: 0;
+  right: 0;
+  background-color: rgba(7, 6, 87, 0.9);
+  opacity: 0.9;
+  overflow: hidden;
+  height: 100vh; 
+  padding-top: 70px;
+  z-index: 1;
+  max-height: 100vh;
+  transition: all 0.5s ease-in-out;
+} 
+.sidebar_menu.show{
+  transform: translateX(0%);
+}
+#navigation{
+  list-style: none;
+  margin-top: 65px ;
+  display: block;
 }
 
-/*@keyframes move-twink-back {
-from {background-position:0 0;}
-to {background-position:-10000px 50px;}
+#navigation li{
+  padding: 15px 0px 15px 35px;
+  box-sizing: border-box;
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
-@-webkit-keyframes move-twink-back {
-from {background-position:0 0;}
-to {background-position:-10000px 50px;}
-}
-@-moz-keyframes move-twink-back {
-from {background-position:0 0;}
-to {background-position:-10000px 50px;}
-}
-@-ms-keyframes move-twink-back {
-from {background-position:0 0;}
-to {background-position:-10000px 50px;}
+#navigation li a {
+  text-decoration: none;
+  outline: 0;
+  line-height: 22px;
 }
 
-.twinkle{
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-width:100%;
-height:8%;
-display:block;
+.social{
+  list-style: none;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  padding: 0px 25px;
 }
-.twinkle{
-background:transparent url(twinkling.png) repeat top center;
-z-index:1;
--moz-animation:move-twink-back 200s linear infinite;
--ms-animation:move-twink-back 200s linear infinite;
--o-animation:move-twink-back 200s linear infinite;
--webkit-animation:move-twink-back 200s linear infinite;
-animation:move-twink-back 200s linear infinite;
+.social li {
+  display: inline-block;
 }
-*/
+.social li a {
+  font-size: 20px; 
+  width: 38px;
+  height: 40px;
+  margin: 0 4px;
+  color: #fafafa;
+  transition: background-color 0.5s ease-in-out;
+}
+.fa:hover{
+  color: #fe14a7;
+  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out; 
+  -moz-transition: color 0.3s ease-in-out; 
+  -ms-transition: color 0.3s ease-in-out; 
+  -o-transition: color 0.3s ease-in-out; 
+
+ }
+@media{
+
+}
+
 canvas{
   position: fixed;
   top:0;
