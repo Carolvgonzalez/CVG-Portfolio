@@ -1,10 +1,10 @@
 console.log('printing');
 
-var canvas = document.querySelector('canvas'); //we are selecting
+var canvas = document.querySelector('canvas');
+var context = canvas.getContext('2d'); //we are selecting
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var c = canvas.getContext('2d');
 
 /*var pic = new Image();
 pic.src="logo/c2.svg";
@@ -12,7 +12,7 @@ pic.src="logo/c2.svg";
 var heading = new Image();
 heading.src = "css/img/heading.svg"; */
 
-var owl  = new Image();
+/*var owl  = new Image();
 owl.src = "css/img/owl.png";
 
 //pic.addEventListener("load", function(){c.drawImage(pic, 30,30),false }); //how to add an image to a canvas
